@@ -10,14 +10,14 @@ import util # custom module implemented by us but the in the same folder
 from CommonsModule import commons # # custom module implemented by us in the different folder
 
 
-# boto3 module example for custom modules
+# # boto3 module example for custom modules
 def list_s3_buckets():
     print("\n# boto3 module example for custom modules")
     s3 = boto3.resource('s3')
     for bucket in s3.buckets.all():
         print (bucket.name)
 
-# custom module built by us
+# # custom module built by us
 def store_invoice_details(name, price, invoice_id):
     print("\n# custom module built by us")
     print("Storing invoice details of the customer; {}, price: {}, invoice_id: {}".format(name, price, invoice_id))
@@ -38,8 +38,8 @@ def transfter_amount(account_number, amount):
         print("Wrong account number!")
 
 # print(boto3)
-# list_s3_buckets()
+list_s3_buckets()
 # store_invoice_details(name="Vamsi", price="$150", invoice_id="invoice-12345")
-transfter_amount(1234567890, 150)
+# transfer_amount(1234567890, 150)
 
 
